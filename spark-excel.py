@@ -7,9 +7,8 @@ spark = SparkSession \
     .builder \
     .appName("Real-Time Data Pipeline Demo") \
     .master("local[*]") \
-     .getOrCreate()
-     #.config("spark.jars", "file:///G://jars//spark-excel_2.11-0.13.1.jar") \
-
+     .config("spark.jars.packages", "com.crealytics:spark-excel_2.11:0.13.1") \
+    .getOrCreate()
     # .config("spark.executor.extraClassPath", "file:///G://jars//spark-excel_2.11-0.8.2.jar") \
     # .config("spark.executor.extraLibrary", "file:///G://jars//spark-excel_2.11-0.8.2.jar") \
     # .config("spark.driver.extraClassPath", "file:///G://jars//spark-excel_2.11-0.8.2.jar") \
